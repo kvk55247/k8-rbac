@@ -18,7 +18,7 @@ metadata:
 subjects:
 # You can specify more than one "subject"
 - kind: Serviceaccount
-  name: roboshop-mysql-secret-reader 
+  name: RoboshopMYSQLsecretReader
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   # "roleRef" specifies the binding to a Role / ClusterRole
@@ -33,7 +33,7 @@ metadata:
   labels:
     purpose: sa
 spec:
-  serviceAccount: roboshop-mysql-secret-reader 
+  serviceAccount: RoboshopMYSQLsecretReader
   containers:
   - name: aws-cli
     image: amazon/aws-cli
